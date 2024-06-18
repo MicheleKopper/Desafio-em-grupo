@@ -1,0 +1,181 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: black
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #141414;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-item {
+    margin: 0 15px;
+}
+
+.logo {
+    height: 40px;
+}
+
+.nav-item a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.nav-item a:hover {
+    color: #e50914;
+}
+
+
+
+
+/* ------------------- MICHELE -------------------  */
+.container {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.thomasShelby{
+    position: absolute;
+    width: 35%;
+    display: flex;
+    
+}
+
+.imagem-fundo {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* preto com 70% de opacidade */
+    pointer-events: none;
+    /* para que o overlay não bloqueie cliques */
+}
+
+.imgLogo {
+    width: 30%;
+    height: auto;
+    position: absolute;
+    top: 18%;
+    left: 10%;
+
+    animation: pulse 2s ease-in-out infinite; /* Aplicação da animação 'pulse' com duração de 2 segundos, modo de aceleração ease-in-out, repetição infinita */
+    z-index: 1; /* Garante que a logomarca fique sobre o fundo */
+}
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1); /* Tamanho normal */
+        opacity: 1; /* Opacidade total */
+    }
+    50% {
+        transform: scale(1.1); /* Aumenta um pouco de tamanho */
+        opacity: 0.7; /* Opacidade reduzida */
+    }
+    100% {
+        transform: scale(1); /* Retorna ao tamanho normal */
+        opacity: 1; /* Opacidade total */
+    }
+}
+
+.textoTitulo {
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
+}
+
+.textoDescricao {
+    font-size: 12px;
+    color: #fff;
+}
+
+.textoDestaque {
+    font-weight: bold;
+    color: #737373;
+}
+
+.container-texto-banner {
+    position: absolute;
+    top: 65%;
+    left: 10%;
+}
+
+
+
+
+/* --------------- */
+
+.container-personagens {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding-top: 40%;
+
+}
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-galeria {
+    width: 240px;
+    height: 135px;
+    overflow: hidden;
+    margin: 10px;
+    transition: width 0.3s ease, height 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.item-galeria img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.item-galeria:hover img {
+    transform: scale(1.1);
+}
+
+.item-galeria.expandido {
+    width: 480px;
+    height: 270px;
+    z-index: 10;
+}
+
+.item-galeria.expandido img {
+    transform: scale(1);
+}
+
